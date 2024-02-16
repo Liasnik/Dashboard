@@ -13,9 +13,9 @@ const FormSchema = z.object({
   }),
   amount: z.coerce
     .number()
-    .gt(0, { message: 'Please enter an amount greater than $0.' }), // added for Server-Side validation
+    .gt(0, { message: 'Please enter an amount greater than $0.' }), // add message for Server-Side validation
   status: z.enum(['pending', 'paid'], {
-    invalid_type_error: 'Please select an invoice status.', // added for Server-Side validation
+    invalid_type_error: 'Please select an invoice status.', // add message for Server-Side validation
   }),
   date: z.string(),
 });
